@@ -1,0 +1,21 @@
+{
+    "name": "juanjoc333/rfc-facil",
+    "description": "Librería para calcular el Registro Federal de Contribuyentes en México (RFC)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan José Cortés Guzmán",
+            "email": "juanjoc333@gmail.com"
+        }
+    ],
+    "require": {
+        "phpspec/phpspec": "^3.0"
+    },
+    "autoload": {
+      "classmap": [],
+      "psr-4": {
+        "RFC\\": "src/RFC/"
+      },
+      "files": []
+    }
+}

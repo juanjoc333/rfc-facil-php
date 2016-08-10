@@ -1,0 +1,6 @@
+suites:
+    main:
+        namespace: RFC
+        src_path: %paths.config%
+
+formatter.name: pretty
