@@ -14,7 +14,7 @@
     "autoload": {
       "classmap": [],
       "psr-4": {
-        "RFC\\": "src/RFC/"
+        "RFC\\": "RFC/"
       },
       "files": []
     }
