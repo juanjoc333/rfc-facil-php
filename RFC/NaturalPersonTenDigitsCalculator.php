@@ -38,8 +38,6 @@ class NaturalPersonTenDigitsCalculator
      * @return string
      */
     protected function obfuscateForbiddenWords($nameCode){
-        var_dump($nameCode);
-
         return (in_array($nameCode, $this->forbiddenWords))
             ? sprintf("%sX", substr($nameCode, 0, 3))
             : $nameCode;
@@ -60,7 +58,6 @@ class NaturalPersonTenDigitsCalculator
         } elseif($this->isFirstLastNameIsTooShort()){
             return $this->firstLastNameTooShortForm();
         } else {
-            var_dump("Using normal form");
             return $this->normalForm();
         }
     }

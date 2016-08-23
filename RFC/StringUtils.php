@@ -681,4 +681,27 @@ class StringUtils
 
         return $string;
     }
+
+    /**
+     * Code taken from David Walsh Site
+     * @author David Walsh
+     * https://davidwalsh.name/flatten-nested-arrays-php
+     * @param $array
+     * @param $return
+     * @return array
+     */
+    static function array_flatten($array,$return) {
+        for($x = 0; $x < count($array); $x++) {
+            if(is_array($array[$x])) {
+                $return = self::array_flatten($array[$x], $return);
+            }
+            else {
+                if(isset($array[$x])) {
+                    $return[] = $array[$x];
+                }
+            }
+        }
+
+        return $return;
+    }
 }

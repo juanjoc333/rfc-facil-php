@@ -8,19 +8,19 @@ class JuristicPerson
     /**
      * @var string
      */
-    private $legalName;
+    public $legalName;
     /**
      * @var int
      */
-    private $day;
+    public $day;
     /**
      * @var int
      */
-    private $month;
+    public $month;
     /**
      * @var int
      */
-    private $year;
+    public $year;
 
     /**
      * JuristicPerson constructor.
