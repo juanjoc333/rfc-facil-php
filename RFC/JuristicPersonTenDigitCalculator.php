@@ -91,8 +91,6 @@ class JuristicPersonTenDigitCalculator
                                                 $this->ignoreForbiddenWords(
                                                     $this->splitWords($legalName))))))));
 
-        var_dump($this->words);
-
         return sprintf("%s%s", $this->threeDigitsCode(), $this->birthdayCode());
     }
 
@@ -115,8 +113,6 @@ class JuristicPersonTenDigitCalculator
      */
     protected function ignoreJuristicPersonTypeAbbreviations($string)
     {
-        var_dump("Ignore juristic person abbr");
-        var_dump($string);
         return preg_replace(self::$JURISTIC_PERSON_TYPE, "", $string);
     }
 
@@ -156,7 +152,6 @@ class JuristicPersonTenDigitCalculator
      */
     protected function markOneLetterAbbreviations($words)
     {
-        var_dump($words);
         return array_map(function($word){
             if(preg_match("/^([^.])\\./", $word)){
                 $word = preg_replace("/^([^.])\\./", "$1AABBRREEVVIIAATTIIOONN", $word);
@@ -208,7 +203,6 @@ class JuristicPersonTenDigitCalculator
      */
     protected function splitOneLetterAbbreviations($words)
     {
-        var_dump($words);
         $abbreviations = array_map(function($word){
             if(preg_match("(AABBRREEVVIIAATTIIOONN)", $word)){
                 return preg_split("/(AABBRREEVVIIAATTIIOONN)/", $word);
@@ -265,7 +259,6 @@ class JuristicPersonTenDigitCalculator
      */
     public function threeDigitsCode()
     {
-        var_dump($this->words);
         if(count($this->words) >= 3){
             return  sprintf("%s%s%s",
                 $this->firstLetterOf($this->words[0]),

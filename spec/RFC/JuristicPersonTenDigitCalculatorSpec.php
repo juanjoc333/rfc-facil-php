@@ -467,7 +467,7 @@ class JuristicPersonTenDigitCalculatorSpec extends ObjectBehavior
     }
 
     function it_should_exclude_special_characters_test_4(){
-        $person = new JuristicPerson("LA S´NDIA S.A DE C.V.", 29, 11, 1982);
+        $person = new JuristicPerson("LA S'NDIA S.A DE C.V.", 29, 11, 1982);
 
         $this->beConstructedWith($person);
         $this->calculate()->shouldStartWith("SND");

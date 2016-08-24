@@ -118,8 +118,6 @@ class HomoclaveCalculator
                 throw new \InvalidArgumentException("No two-digit-code mapping for char: " . $character);
             }
 
-            var_dump("character => " . $character . " value => " . $this->FULL_NAME_MAPPING[$character]);
-
             $this->mappedFullName = sprintf("%s%s", $this->mappedFullName, $this->FULL_NAME_MAPPING[$character]);
 
         }, str_split($this->fullName));
