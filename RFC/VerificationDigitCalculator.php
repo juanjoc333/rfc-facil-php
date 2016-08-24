@@ -59,12 +59,19 @@ class VerificationDigitCalculator
     }
 
     public function calculate(){
+        var_dump($this->rfc12digits);
         $sum = 0;
         for($i = 0; $i < 12; $i++){
+            var_dump($this->mapDigit(substr($this->rfc12digits, $i, 1)) . " * " . (13 - $i));
+
             $sum += ((int) $this->mapDigit(substr($this->rfc12digits, $i, 1))) * (13 - $i);
         }
 
+        var_dump($sum);
+
         $reminder = $sum % 11;
+
+        var_dump($reminder);
 
         if($reminder === 0){
             return "0";
@@ -74,9 +81,11 @@ class VerificationDigitCalculator
     }
 
     protected function mapDigit($character){
-        if(!array_key_exists($character, $this->MAPPING)){
+        if(!$character || !array_key_exists($character, $this->MAPPING)){
+            //var_dump("No character => " . $character);
             return 0;
         } else {
+            //var_dump("Character => " . $character);
             return $this->MAPPING[$character];
         }
     }

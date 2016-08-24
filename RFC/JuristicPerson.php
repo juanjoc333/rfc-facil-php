@@ -3,7 +3,7 @@
 namespace RFC;
 
 
-class JuristicPerson
+class JuristicPerson implements HomoclavePerson
 {
     /**
      * @var string

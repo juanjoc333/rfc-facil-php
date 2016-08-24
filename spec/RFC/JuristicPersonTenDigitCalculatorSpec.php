@@ -647,6 +647,4 @@ class JuristicPersonTenDigitCalculatorSpec extends ObjectBehavior
         $this->beConstructedWith($person);
         $this->calculate()->shouldStartWith("CPA");
     }
-
-
 }
