@@ -1,5 +1,32 @@
-# rfc-facil-php
+# RfcFacil PHP
 Librería para calcular el Registro Federal de Contribuyentes en México (RFC) - PHP
+
+## Uso
+
+``` php
+   
+    //Persona físicas
+    $builder = new RfcBuilder();
+    
+    $rfc = $builder->name('Juan José')
+        ->firstLastName('Cortés')
+        ->secondLastName('Guzmán')
+        ->birthday(3, 9, 1984)
+        ->build()
+        ->toString();
+    
+    echo $rfc;
+    
+    //Personas morales
+    $builder = new RfcBuilder();
+    
+    $rfc = $builder->legalName('AUTOS PULLMAN, S.A. DE C.V.')
+         ->creationDate(30, 9, 1964)
+         ->build()
+         ->toString();
+    
+    echo $rfc;
+```
 
 ## Download
 
