@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/juanjoc333/rfc-facil-php/master/logo.png)
+![](logo.png)
 
 # RfcFacil PHP
 Librería para calcular el Registro Federal de Contribuyentes en México (RFC) - PHP
