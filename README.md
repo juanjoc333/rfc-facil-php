@@ -1,7 +1,7 @@
 # rfc-facil-php
 Librería para calcular el Registro Federal de Contribuyentes en México (RFC) - PHP
 
-##Download
+## Download
 
 Con composer
 ``` bash
