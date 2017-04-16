@@ -1,7 +1,8 @@
 {
-    "name": "juanjoc333/rfc-facil",
+    "name": "juanjoc333/rfc-facil-php",
     "description": "Librería para calcular el Registro Federal de Contribuyentes en México (RFC)",
-    "license": "MIT",
+    "keywords": ["rfc", "rfc mexico"],
+    "license": "Apache 2.0",
     "authors": [
         {
             "name": "Juan José Cortés Guzmán",
@@ -9,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=5.6.4",
         "phpspec/phpspec": "^3.0"
     },
     "autoload": {
