@@ -1,6 +1,13 @@
 # rfc-facil-php
 Librería para calcular el Registro Federal de Contribuyentes en México (RFC) - PHP
 
+##Download
+
+Con composer
+``` bash
+    composer require juanjoc333/rfc-facil-php
+```
+
 ## Fuente
 Esta librería se basa en documentación oficial obtenida por medio del IFAI (Instituto Federal de Acceso a la Información). El documento puede ser consultado en el sitio de [INFOMEX](https://www.infomex.org.mx/gobiernofederal/moduloPublico/moduloPublico.action) con el folio `0610100135506`.
 
